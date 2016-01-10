@@ -115,7 +115,7 @@ function opf(b) {
         a = a.text()
     }
     $("#content-title").html("<span class='title'>" + c + '</span> by <span class="author">' + a + "</span>");
-    if (c || c === "") {
+    if (!c || c === "") {
         $("#content-title").html("<span class='title'>" + $(b).find("dc\\:title").text() + '</span> by <span class="author">' + $(b).find("dc\\:creator").text() + "</span>")
     }
     var d = "opf\\:item";
